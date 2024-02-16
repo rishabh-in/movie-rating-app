@@ -1,5 +1,5 @@
 import express from 'express';
-import { fetchUserDetails } from '../Controller/git.service.js';
+import { fetchUserDetails } from '../Controller/git.js';
 let routes = express.Router();
 
 routes.get("/git/fetch", fetchUserDetails);
