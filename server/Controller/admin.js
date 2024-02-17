@@ -1,15 +1,7 @@
 import userModel from "../Model/UserModel.js";
 import AdminRequestModel from "../Model/AdminRequestModel.js"
 import {v4} from "uuid";
-
-
-export const uploadMedia = async (req, res) => {
-  try {
-    // let {}
-  } catch (error) {
-    console.log(error);
-  }
-}
+import fs from 'fs';
 
 export const requestForRoleUpgrade = async (req, res) => {
   try {

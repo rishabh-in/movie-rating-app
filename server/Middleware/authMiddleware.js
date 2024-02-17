@@ -9,11 +9,10 @@ const protect = (req, res, next) => {
     req.headers.authorization.startsWith("Bearer")
   ) {
     token = req.headers.authorization.split(" ")[1];
-    console.log(token)
 
     //Verify token 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
+    req.tokenId = decoded.id;
     next()
   }
 
